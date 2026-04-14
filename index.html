@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Era Mesozoica: O Império dos Répteis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="nav-container" aria-label="Navegação Principal">
+            <div class="logo">Mesozoic<span>Explore</span></div>
+            <div class="accessibility-controls">
+                <button id="contrast-toggle" aria-label="Alternar alto contraste">🌓</button>
+                <button id="font-increase" aria-label="Aumentar fonte">A+</button>
+                <button id="font-decrease" aria-label="Diminuir fonte">A-</button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h1 id="hero-title">A Era dos Gigantes</h1>
+                <p>Explore o Triássico, Jurássico e Cretáceo em uma jornada imersiva.</p>
+                <a href="#periods" class="btn-cta">Iniciar Exploração</a>
+            </div>
+        </section>
+
+        <section id="periods" class="reveal" aria-labelledby="periods-title">
+            <h2 id="periods-title">Períodos Geológicos</h2>
+            <div id="periods-container" class="grid-layout">
+                </div>
+        </section>
+
+        <section class="carousel-section reveal" aria-labelledby="carousel-title">
+            <h2 id="carousel-title">Espécies de Destaque</h2>
+            <div class="carousel-container" role="region" aria-roledescription="carousel">
+                <div id="carousel-track" class="carousel-track">
+                    </div>
+                <div class="carousel-nav">
+                    <button id="prev-btn" aria-label="Slide anterior">❮</button>
+                    <button id="next-btn" aria-label="Próximo slide">❯</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq reveal" aria-labelledby="faq-title">
+            <h2 id="faq-title">Curiosidades Rápidas</h2>
+            <div id="accordion-container">
+                </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2024 Portal Mesozoico - UX & Acessibilidade Aplicada</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
