@@ -1,0 +1,101 @@
+/* --- CONFIGURAÇÕES GERAIS E VARIÁVEIS --- */
+:root {
+    --primary-color: #2d5a27;
+    --secondary-color: #d4a373;
+    --bg-color: #fefae0;
+    --text-color: #283618;
+    --white: #ffffff;
+    --radius: 12px;
+    --spacing: 1.5rem;
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: 16px;
+}
+
+/* --- MODO ALTO CONTRASTE --- */
+body.high-contrast {
+    --primary-color: #ffff00;
+    --secondary-color: #ffffff;
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --white: #000000;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background 0.3s, font-size 0.2s;
+}
+
+/* --- GRID E LAYOUT --- */
+.grid-layout {
+    display: grid;
+    gap: var(--spacing);
+    padding: var(--spacing);
+    /* Mobile-first: 1 coluna */
+    grid-template-columns: 1fr; 
+}
+
+@media (min-width: 768px) {
+    .grid-layout {
+        /* Edite aqui o número de colunas para Desktop */
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* --- COMPONENTES --- */
+.card {
+    background: var(--white);
+    padding: var(--spacing);
+    border-radius: var(--radius);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    padding: 40px;
+    text-align: center;
+}
+
+/* --- ACESSIBILIDADE E ANIMAÇÕES --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: var(--transition);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 1rem;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--text-color);
+}
